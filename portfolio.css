@@ -1,0 +1,252 @@
+/*Browser Reset, so that in built styling for headers is reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+
+/*Main CSS*/
+body {
+  background-color: #f7f7f7;
+  font-family: Montserrat;
+  width: 100%;
+  color: #121c1c;
+}
+
+/*Header*/
+.header {
+  width: 100%;
+  margin:0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  -webkit-box-shadow: 0 10px 8px -8px #dbdbdb;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0 10px 8px -8px #dbdbdb;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0 10px 8px -8px #dbdbdb;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  background-color: #e8e8e8;
+  margin-bottom: 40px
+}
+
+.headericon {
+  width: calc(20% - 20px);
+  padding: 10px;
+}
+
+.logo {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.headertext {
+  width: calc(80% - 60px);
+  text-align: right;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 60px;
+}
+
+.title {
+  vertical-align: bottom;
+}
+
+.headertitle {
+  color: #121c1c;
+  height: auto;
+  font-size: 45px;
+  font-weight: lighter;
+}
+
+.headersubtitle {
+  color: #121c1c;
+  height: auto;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*Content*/
+.content {
+  width: 100%;
+}
+
+.featureimagediv {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.featureimageimg {
+  max-height: 800px;
+  max-width:100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 6px 1px #dbdbdb;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 6px 1px #dbdbdb;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 6px 1px #dbdbdb;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+/*Table*/
+.tableheader h1 {
+  color: #121c1c;
+  font-weight: 500;
+  font-size: 40px;
+  padding-top: 60px;
+  padding-bottom:15px;
+  padding-left: 40px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.project {
+  width: 300px;
+  height: auto;
+  color: #121c1c;
+  text-align: center;
+  background-color: #e8e8e8;
+  padding: 10px;
+  margin:10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 6px 1px #dbdbdb;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 6px 1px #dbdbdb;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 6px 1px #dbdbdb;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.projectcontent {
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+
+.projectheader {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.projectimg {
+  width: 100%;
+  height:auto;
+  border-radius: 5px;
+}
+
+/*Responsive Design*/
+@media screen and (min-width: 1000px) {
+  .project {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .headericon {
+    width: 100%;
+    text-align: center;
+  }
+
+  .headertext {
+    width:100%;
+  }
+
+  .headertitle, .headersubtitle {
+    text-align: center;
+  }
+
+  .featureimageimg {
+    max-height: 350px;
+  }
+
+  .tableheader h1 {
+    text-align: center;
+    padding: 5px;
+  }
+
+  .projectheader {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .headertitle {
+    font-size: 30px;
+  }
+
+  .headersubtitle {
+    font-size: 16px;
+  }
+
+  .featureimageimg {
+    max-height: 200px;
+  }
+
+  .project {
+    max-width: 100%;
+  }
+}
